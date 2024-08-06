@@ -1,25 +1,37 @@
 import "./App.css";
 import TaskList from "./components/TaskList";
+import styles from "./components/TaskList.module.css";
+// import addTask from "./components/AddTask";
+// import styled from "styled-components";
 let list = [
   {
-    id: 1,
+    id: 0,
     text: "1 text",
   },
   {
-    id: 2,
+    id: 1,
     text: "2 text",
   },
   {
-    id: 3,
+    id: 2,
     text: "3 text",
   },
 ];
+
+// const Input = styled.input`
+// `
 function App() {
   return (
     <div className="App">
       <TaskList list={list} ></TaskList>
-      <button onClick={(event) => console.log(event.target)}>Click me!</button>
-    </div>
+    
+      <button onClick={(e) => console.log(list)}>Click me!</button>
+      <div className={styles.boxAddTask}>
+      <button className={styles.btn  } >ADD</button>
+      <input placeholder="text" />
+      </div>
+      {/* onClick={() => addTask(Input.value)} */}
+      </div>
   );
 }
 
