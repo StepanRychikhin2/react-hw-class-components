@@ -1,6 +1,15 @@
 import React, { Component } from "react";
 import styles from "../components/TaskList.module.css";
-import svg from "./musor2.png";
+import svg from "./musor.svg";
+import styled from "styled-components";
+
+const img = styled.img`
+
+`
+
+img.defaultProps = {
+  src: svg,
+}
 class TaskList extends Component {
   removeItem = (list, task) => {
     delete list[task];
@@ -37,7 +46,7 @@ console.log(list);
                   onClick={(e) => this.removeItem(list, task.id)}
                   className={styles.btn}
                 >
-                  <img href={svg}/>
+                  <img src={svg} href={svg}/>
                 </button>
               </li>
             );
