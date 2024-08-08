@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styles from "../components/TaskList.module.css";
-import svg from "./musor.svg";
+import svg from "./musor2.png";
 class TaskList extends Component {
   removeItem = (list, task) => {
     delete list[task];
