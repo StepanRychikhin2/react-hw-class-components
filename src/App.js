@@ -26,11 +26,6 @@ function App() {
       <TaskList list={list} ></TaskList>
     
       <button onClick={(e) => console.log(list)}>Click me!</button>
-      <div className={styles.boxAddTask}>
-      <button className={styles.btn  } >ADD</button>
-      <input placeholder="text" />
-      </div>
-      {/* onClick={() => addTask(Input.value)} */}
       </div>
   );
 }

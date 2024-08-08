@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styles from "../components/TaskList.module.css";
-
+import svg from "./musor.svg";
 class TaskList extends Component {
   removeItem = (list, task) => {
     delete list[task];
@@ -37,7 +37,7 @@ console.log(list);
                   onClick={(e) => this.removeItem(list, task.id)}
                   className={styles.btn}
                 >
-                  DEL
+                  <img href={svg}/>
                 </button>
               </li>
             );
